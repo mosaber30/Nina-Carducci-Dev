@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nina Carducci - Photographe professionnelle en Île-de-France. Capturer vos moments les plus précieux et les rendre immortels."> <!-- Added meta description for SEO -->
+    <meta name="description" content="Nina Carducci - Photographe professionnelle en Île-de-France. Capturer vos moments les plus précieux et les rendre immortels.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nina Carducci - Professional Photographer in Bordeaux">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nina-carducci.github.io">
+    <meta property="og:image" content="https://example.com/images/cover.jpg">
+    <meta property="og:description" content="Capture your precious moments with Nina Carducci, a professional photographer in Bordeaux.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nina Carducci - Professional Photographer in Bordeaux">
+    <meta name="twitter:description" content="Capture your precious moments with Nina Carducci, a professional photographer in Bordeaux.">
+    <meta name="twitter:image" content="https://example.com/images/cover.jpg">
+    
+    <!-- Added meta description for SEO -->
     <title>Nina Carducci - Photographe en Île-de-France</title>
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="./assets/style.css">
@@ -14,17 +29,27 @@
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Photographer",
-      "name": "Nina Carducci",
-      "url": "https://nina-carducci.github.io",
-      "sameAs": [
-        "https://www.instagram.com/ninacarducci.photo/?hl=fr"
-      ],
-      "description": "Photographe professionnelle en Île-de-France, spécialisée dans les portraits, mariages, concerts, et photographie d'entreprise."
-    }
-    </script> <!-- Added structured data for SEO -->
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Nina Carducci",
+          "image": "https://example.com/images/logo.png",
+          "@id": "https://nina-carducci.github.io",
+          "url": "https://nina-carducci.github.io",
+          "telephone": "+33-6-1234-5678",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Rue de Photographie",
+            "addressLocality": "Bordeaux",
+            "postalCode": "33000",
+            "addressCountry": "FR"
+          },
+          "sameAs": [
+            "https://www.instagram.com/ninacarducci.photo/?hl=fr"
+          ],
+          "description": "Nina Carducci is a professional photographer based in Bordeaux, specializing in capturing life's precious moments."
+        }
+        </script> <!-- Added structured data for SEO -->
 
     <!-- JavaScript Files -->
     <script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
