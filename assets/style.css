@@ -2,13 +2,34 @@
 body {
     max-width: 1920px;
     margin: auto;
-    font-family: 'Inter', Arial, sans-serif; /* Added fallback fonts */
-    color: #333333; /* Changed to a darker gray for better contrast */
+    font-family: 'Inter', Arial, sans-serif;
+    color: #333;
 }
 
-/* Top Header */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Google Fonts Integration from style2.css */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Spectral';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/spectral/v13/rnCu-xNNww_2s0amA9M8qtHEWfqFXVAKArdqqQ.woff2) format('woff2');
+}
+
+/* Header Styles */
 .top-header {
-    background-color: white;
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -17,31 +38,74 @@ body {
     padding-inline: 100px;
     padding-block: 30px;
     align-items: center;
-    color: #333333; /* Darkened text color for better contrast */
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .top-header .name {
-    font-size: 26px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8A7728;
 }
 
-.nav ul {
+nav ul {
     display: flex;
-    list-style-type: none;
-    font-size: 14px;
-    margin-bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav li {
-    padding-inline: 10px;
+nav ul li {
+    margin-left: 20px;
 }
 
-.nav a {
+nav ul li a {
     text-decoration: none;
-    color: #000000; /* Ensured black text for maximum contrast */
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
 }
 
+nav ul li a:hover {
+    color: #8A7728;
+}
+
+/* Social Icon Styling */
 .social-link img {
-    width: 20px;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #F6D2B8;
+    padding: 40px 0;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #8A7728;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* About Section */
@@ -51,12 +115,11 @@ body {
     padding-inline: 100px;
     padding-block: 100px;
     position: relative;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 .picture.left::before {
     content: ' ';
-    background-color: #C5834F; /* Darkened background to improve contrast */
+    background-color: #E5975F;
     width: 374px;
     height: 329px;
     position: absolute;
@@ -71,59 +134,55 @@ body {
     z-index: 0;
 }
 
-.picture img {
-    width: 100%;
-    height: auto; /* Ensured images maintain aspect ratio */
-}
-
 #about-me {
     flex: 2;
 }
 
-.about-me__title {
+.about-me-title {
     margin-top: 1em;
     margin-bottom: 60px;
     font-size: 30px;
-    color: #8A7728; /* Darkened the title color for better contrast */
 }
 
-.about-me__introduction {
-    font-family: 'Spectral', serif; /* Ensured proper fallback for font */
+#about-me .about-me-introduction {
+    font-family: 'Spectral', serif;
     font-weight: 800;
     font-style: italic;
     width: 60%;
-    color: #5B5B5B; /* Adjusted for better contrast */
+    font-size: 16px;
 }
 
 #about-me p {
     width: 80%;
     font-size: 14px;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 /* Gallery Section */
-#gallery {
-    /* Removed min-height as it was commented out */
-}
-
 .title {
     text-align: center;
     padding-block: 2em;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 .gallery .nav {
     justify-content: center;
 }
 
+.nav li {
+	padding-inline: 10px;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #ffffff; /* White text for better contrast */
-    background-color: #8A7728; /* Darkened background for better contrast */
-    border-radius: 0;
+	color: #000;
+	background-color: #BEB45A;
+	border-radius: 0 ;
 }
 
 .nav-pills .nav-link {
-    color: #333333; /* Darkened text color for better contrast */
+	color: #000;
+}
+
+.nav-pills .nav-link:hover, .gallery img:hover {
+	cursor: pointer;
 }
 
 .item-column {
@@ -146,40 +205,17 @@ body {
     padding: 0.5em;
 }
 
+/* Navigation Arrows */
 .mg-prev, .mg-next {
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* Changed border-radius to make buttons round */
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
     display: flex;
     font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5); /* Added background for better visibility */
-    color: white; /* Added color for better contrast */
-}
-
-/* Quote Section */
-.quote {
-    font-family: 'Spectral', serif; /* Ensured proper fallback for font */
-    font-style: italic;
-    width: 70%;
-    margin: auto;
-    padding-block: 3em;
-    color: #333333; /* Darkened text color for better contrast */
-}
-
-.quote__text {
-    font-family: 'Spectral', serif; /* Ensured proper fallback for font */
-    font-style: italic;
-    font-weight: 300;
-    color: #333333; /* Darkened text color for better contrast */
-}
-
-.quote__author {
-    font-family: 'Spectral', serif; /* Ensured proper fallback for font */
-    font-weight: 800;
-    font-size: 22px;
-    color: #8A7728; /* Darkened text color for better contrast */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 /* Services Section */
@@ -187,7 +223,7 @@ body {
     margin: auto;
     background-color: #A8D5D8;
     position: relative;
-    color: #333333; /* Darkened text color for better contrast */
+    color: #333;
 }
 
 #services .container::before {
@@ -217,7 +253,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     z-index: 1;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 /* Contact Section */
@@ -227,7 +262,6 @@ body {
     position: relative;
     padding-inline: 100px;
     padding-block: 100px;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 #contact .container {
@@ -252,15 +286,39 @@ body {
 form input, form textarea {
     width: 100%;
     background-color: transparent;
-    border: solid 1px #333333; /* Darkened border color for better visibility */
+    border: solid 1px #333;
     margin-bottom: 20px;
-    color: #333333; /* Darkened text color for better contrast */
 }
 
 input[type="submit"] {
-    background-color: #8A7728; /* Darkened button color for better contrast */
-    color: #FFFFFF; /* White text on button for better contrast */
+    background-color: #BEB45A;
+    color: #ffffff;
     padding: 0.5em 1em;
+}
+
+/* Quote Section */
+.quote {
+    font-family: 'Spectral', serif;
+    font-style: italic;
+    width: 70%;
+    margin: auto;
+    padding-block: 3em;
+    color: #333;
+}
+
+.quote-text {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.quote-author {
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.quote-text, .quote-author, #about-me .about-me-introduction {
+    font-family: 'Spectral', serif;
 }
 
 /* Responsive Design */
@@ -273,7 +331,7 @@ input[type="submit"] {
         align-items: center;
     }
 
-    .about-me__title {
+    .about-me-title {
         margin-top: 0;
         margin-bottom: 1em;
     }
@@ -295,10 +353,10 @@ input[type="submit"] {
     .picture.left::before {
         width: 100%;
         height: 30%;
-        top: 0; /* Removed unnecessary positioning adjustments */
+        top: 0;
     }
 
-    .about-me__title {
+    .about-me-title {
         text-align: center;
         margin-top: 1em;
     }
@@ -342,12 +400,12 @@ input[type="submit"] {
         padding-inline: 0;
     }
 
-    .top-header .nav, .top-header .nav ul {
+    .top-header nav, .top-header nav ul {
         width: 100%;
         padding: 0;
     }
 
-    .top-header .nav li {
+    .top-header nav li {
         flex: 1;
         padding-block: 1em;
         text-align: center;
